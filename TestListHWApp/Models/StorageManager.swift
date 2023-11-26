@@ -23,6 +23,7 @@ final class StorageManager {
         })
         return container
     }()
+    
     private init() {
         context = persistentContainer.viewContext
     }

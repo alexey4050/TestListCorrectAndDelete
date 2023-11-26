@@ -89,14 +89,8 @@ extension TaskListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         configure(cell, at: indexPath)
         return cell
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        //        let task = taskList[indexPath.row]
-        //        var content = cell.defaultContentConfiguration()
-        //        content.text = task.title
-        //
-        //        cell.contentConfiguration = content
-        //        return cell
     }
+    
     private func configure(_ cell: UITableViewCell, at indexPath: IndexPath) {
         let task = taskList[indexPath.row]
         var content = cell.defaultContentConfiguration()
@@ -131,16 +125,16 @@ extension TaskListViewController {
         let task = taskList[indexPath.row]
         showAlert(with: "Edit Task", and: "Update the task", initialText: task.title)
         
-//        { [weak self] newTitle in
-//            task.title = newTitle
-//            self?.storageManager.updateTask(task)
-//            
-//            if let cell = self?.tableView.cellForRow(at: indexPath) {
-//                var content = cell.defaultContentConfiguration()
-//                content.text = newTitle
-//                cell.contentConfiguration = content
-//            }
-//        }  не смог реализовать метод, не уверен в правильности создания func updateTask
+        //        { [weak self] newTitle in
+        //            task.title = newTitle
+        //            self?.storageManager.updateTask(task)
+        //            
+        //            if let cell = self?.tableView.cellForRow(at: indexPath) {
+        //                var content = cell.defaultContentConfiguration()
+        //                content.text = newTitle
+        //                cell.contentConfiguration = content
+        //            }
+        //        }  не смог реализовать метод, не уверен в правильности создания func updateTask
     }
 }
 
